@@ -27,7 +27,7 @@ do
 	then
 		echo "Invalid Input, cannot Input Numbers, please try again. "
 		
-	elif [[ $menuOption =~ $[] ]] 
+	elif [[ $menuOption == *['!'@#\$%^\&*()_+]* ]] 
 	then
 		echo "Invalid Input, cannot Input Special Characters, please try again. "
 						
@@ -56,86 +56,72 @@ do
 		
 		elif [ $subNets = 1 ]
 		then
-			echo 
-"Bits Burrowed (last byte in SNM) = 0
-Binary (last byte in SNM) = 0000 0000
-Subnets = 1
-Addresses per Subnet = 256
-Hosts per Subnet = 254
-Subnet Mask (255.255.255.xxx) = .0
-Prefix = /24
-"
+			echo "Bits Burrowed (last byte in SNM) = 0"
+            echo "Binary (last byte in SNM) = 0000 0000"
+            echo "Subnets = 1"
+            echo "Addresses per Subnet = 256"
+            echo "Hosts per Subnet = 254"
+            echo "Subnet Mask (255.255.255.xxx) = .0"
+            echo "Prefix = /24"
 
 		elif [ $subNets = 2 ]
 		then
-			echo 
-"Bits Burrowed (last byte in SNM) = 1
-Binary (last byte in SNM) = 1000 0000
-Subnets = 2
-Addresses per Subnet = 128
-Hosts per Subnet = 126
-Subnet Mask (255.255.255.xxx) = .128
-Prefix = /25
-"
+			echo "Bits Burrowed (last byte in SNM) = 1"
+            echo "Binary (last byte in SNM) = 1000 0000"
+            echo "Subnets = 2"
+            echo "Addresses per Subnet = 128"
+            echo "Hosts per Subnet = 126"
+            echo "Subnet Mask (255.255.255.xxx) = .128"
+            echo "Prefix = /25"
 		elif [[ $subNets == 3 || $subNets == 4 ]]
-		then
-			echo 
-"Bits Burrowed (last byte in SNM) = 2
-Binary (last byte in SNM) = 1100 0000
-Subnets = 4
-Addresses per Subnet = 64
-Hosts per Subnet = 62
-Subnet Mask (255.255.255.xxx) = .192
-Prefix = /26
-"
+		then 
+            echo "Bits Burrowed (last byte in SNM) = 2"
+            echo "Binary (last byte in SNM) = 1100 0000"
+            echo "Subnets = 4"
+            echo "Addresses per Subnet = 64"
+            echo "Hosts per Subnet = 62"
+            echo "Subnet Mask (255.255.255.xxx) = .192"
+            echo "Prefix = /26"
 
 		elif [[ $subNets -ge 5 && $subNets -le 8 ]]
 		then
-			echo 
-"Bits Burrowed (last byte in SNM) = 3
-Binary (last byte in SNM) = 1110 0000
-Subnets = 8
-Addresses per Subnet = 32
-Hosts per Subnet = 30
-Subnet Mask (255.255.255.xxx) = .224
-Prefix = /27
-"
+			echo "Bits Burrowed (last byte in SNM) = 3"
+            echo "Binary (last byte in SNM) = 1110 0000"
+            echo "Subnets = 8"
+            echo "Addresses per Subnet = 32"
+            echo "Hosts per Subnet = 30"
+            echo "Subnet Mask (255.255.255.xxx) = .224"
+            echo "Prefix = /27"
 
 		elif [[ $subNets -ge 9 && $subNets -le 16 ]]
 		then
-			echo 
-"Bits Burrowed (last byte in SNM) = 4
-Binary (last byte in SNM) = 1111 0000
-Subnets = 16
-Addresses per Subnet = 16
-Hosts per Subnet = 14
-Subnet Mask (255.255.255.xxx) = .240
-Prefix = /28
-"
+			echo "Bits Burrowed (last byte in SNM) = 4"
+            echo "Binary (last byte in SNM) = 1111 0000"
+            echo "Subnets = 16"
+            echo "Addresses per Subnet = 16"
+            echo "Hosts per Subnet = 14"
+            echo "Subnet Mask (255.255.255.xxx) = .240"
+            echo "Prefix = /28"
 
 		elif [[ $subNets -ge 17 && $subNets -le 32 ]]
 		then
-			echo 
-"Bits Burrowed (last byte in SNM) = 5
-Binary (last byte in SNM) = 1111 1000
-Subnets = 32
-Addresses per Subnet = 8
-Hosts per Subnet = 6
-Subnet Mask (255.255.255.xxx) = .248
-Prefix = /29
-"
+			echo "Bits Burrowed (last byte in SNM) = 5"
+            echo "Binary (last byte in SNM) = 1111 1000"
+            echo "Subnets = 32"
+            echo "Addresses per Subnet = 8"
+            echo "Hosts per Subnet = 6"
+            echo "Subnet Mask (255.255.255.xxx) = .248"
+            echo "Prefix = /29"
 
 		elif [[ $subNets -ge 33 && $subNets -le 64 ]]
 		then
-			echo 
-"Bits Burrowed (last byte in SNM) = 6
-Binary (last byte in SNM) = 1111 1100
-Subnets = 64
-Addresses per Subnet = 8
-Hosts per Subnet = 6
-Subnet Mask (255.255.255.xxx) = .252
-Prefix = /30
-"
+			echo "Bits Burrowed (last byte in SNM) = 6"
+            echo "Binary (last byte in SNM) = 1111 1100"
+            echo "Subnets = 64"
+            echo "Addresses per Subnet = 8"
+            echo "Hosts per Subnet = 6"
+            echo "Subnet Mask (255.255.255.xxx) = .252"
+            echo "Prefix = /30"
 		fi	
 	fi
 done
